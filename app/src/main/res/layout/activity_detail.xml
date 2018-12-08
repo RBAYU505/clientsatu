@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_detail">
 
+
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,7 +41,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="NAMA :"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textStyle="bold" />
 
                         <TextView
@@ -50,7 +51,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="INI ACARA X"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -65,7 +66,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="TANGGAL : "
-                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textStyle="bold" />
 
                         <TextView
@@ -75,7 +76,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="11 Januari 2019"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -90,7 +91,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="WAKTU : "
-                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textStyle="bold" />
 
                         <TextView
@@ -100,7 +101,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="18:00 WIB"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -114,7 +115,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="TEMPAT : "
-                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textStyle="bold" />
 
                         <TextView
@@ -124,7 +125,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="Student Lounge"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -138,7 +139,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="DESKRIPSI : "
-                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall"
                             android:textStyle="bold" />
 
                         <TextView
@@ -148,7 +149,7 @@
                             android:maxLines="1"
                             android:padding="5dp"
                             android:text="Jelasno jall"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
                     </LinearLayout>
 
                 </LinearLayout>

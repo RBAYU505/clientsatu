@@ -3,9 +3,14 @@ package id.restabayu.clientsatu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-// import android.support.v7.widget.Toolbar;
 // import android.view.View;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -16,8 +21,6 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
 
         namaTxt = (TextView) findViewById(R.id.namaDetailTextView);
         tanggalTxt= (TextView) findViewById(R.id.tanggalDetailTextView);
@@ -44,5 +47,4 @@ public class DetailActivity extends AppCompatActivity {
         deskripsiTxt.setText(deskripsi);
 
     }
-
 }

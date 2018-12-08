@@ -3,11 +3,10 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="150dp"
     android:layout_margin="10dp"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="5dp">
-    and
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
             android:padding="10dp"
             android:text="Name"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/colorAccent"
+            android:textColor="#ff6c22"
             android:textStyle="bold" />
 
         <TextView
@@ -30,10 +29,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:lines="3"
+            android:lines="2"
             android:padding="10dp"
             android:text="Deskripsi"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
             android:id="@+id/descriptionTextView"
