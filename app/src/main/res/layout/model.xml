@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:layout_margin="10dp"
@@ -18,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:padding="10dp"
+            android:padding="6dp"
             android:text="Name"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#ff6c22"
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:lines="2"
-            android:padding="10dp"
+            android:padding="6dp"
             android:text="Deskripsi"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -38,9 +37,11 @@
             android:id="@+id/descriptionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Waktu"
+            android:layout_alignParentLeft="true"
+            android:padding="6dp"
+            android:text="waktu"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="italic" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

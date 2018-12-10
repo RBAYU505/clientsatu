@@ -1,9 +1,12 @@
 package id.restabayu.clientsatu;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
@@ -36,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Classified> classifieds = new ArrayList<>();
         ListView mListView;
         Context c;
+        ProgressBar progressBar;
+
 
         /*
        let's receive a reference to our FirebaseDatabase
@@ -45,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
             this.c = context;
             this.mListView = mListView;
             this.retrieve();
+            progressBar = (ProgressBar) findViewById(R.id.progressbar);
+            progressBar.setVisibility(View.VISIBLE);
         }
+
 
         /*
         Retrieve and Return them clean data in an arraylist so that they just bind it to ListView.
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     }
+                    progressBar.setVisibility(View.GONE);
                 }
 
                 @Override
@@ -178,6 +188,24 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /************************************EXIT DIALOG************************************/
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this, R.style.AlertDialogStyle)
+                .setTitle("Apakah anda yakin ingin keluar ?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("Tidak", null)
+                .show();
+    }
+
+
     /**********************************MAIN ACTIVITY CONTINUATION************************/
     //instance fields
     DatabaseReference db;
@@ -185,15 +213,6 @@ public class MainActivity extends AppCompatActivity {
     CustomAdapter adapter;
     ListView mListView;
     FirebaseAuth mAuth;
-
-  /*  @Override
-    protected void onStart() {
-        super.onStart();
-        if(mAuth.getCurrentUser() == null) {
-            finish();
-            startActivity(new Intent(this,SigninActivity.class));
-        }
-    } */
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -206,10 +225,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
+
         mListView = (ListView) findViewById(R.id.myListView);
         //initialize firebase database
         db = FirebaseDatabase.getInstance().getReference();
         helper = new FirebaseHelper(db, this, mListView);
-
         }
     }
