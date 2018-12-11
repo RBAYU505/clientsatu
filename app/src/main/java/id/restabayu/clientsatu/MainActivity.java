@@ -3,7 +3,6 @@ package id.restabayu.clientsatu;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
@@ -53,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             this.retrieve();
             progressBar = (ProgressBar) findViewById(R.id.progressbar);
             progressBar.setVisibility(View.VISIBLE);
+
+
         }
 
 
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Object getItem(int position) {
-            return classifieds.get(position);
+            return classifieds.get(getCount() - position - 1);
         }
 
         @Override
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(c, s.getNama(), Toast.LENGTH_SHORT).show();
+                //    Toast.makeText(c, s.getNama(), Toast.LENGTH_SHORT).show();
                     String[] classifieds = {
                             s.getNama(),
                             s.getTanggal(),
