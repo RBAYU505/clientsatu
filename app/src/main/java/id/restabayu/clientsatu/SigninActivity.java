@@ -15,6 +15,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import id.restabayu.clientsatu.welcome.PerfManager;
+import id.restabayu.clientsatu.welcome.WelcomeActivity;
+
 public class SigninActivity extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth mAuth;
@@ -73,7 +76,11 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                     progressBar.setVisibility(View.GONE);
                     if(task.isSuccessful()) {
                         finish();
-                        Intent intent = new Intent(SigninActivity.this, MainActivity.class);
+                        //nyobo
+                        PerfManager perfManager = new PerfManager(getApplicationContext());
+                        perfManager.setFirstTimeLaunch(true);
+
+                        Intent intent = new Intent(SigninActivity.this, WelcomeActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                     } else {
@@ -88,7 +95,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
 
         if(mAuth.getCurrentUser() !=null) {
             finish();
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this,WelcomeActivity.class));
         }
     }
 

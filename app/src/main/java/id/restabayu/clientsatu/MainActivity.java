@@ -28,6 +28,7 @@ import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuLogout:
                 FirebaseAuth.getInstance().signOut();
                 finish();
-                startActivity(new Intent(this, SigninActivity.class));
+                startActivity(new Intent(this, Goodbye.class));
                 break;
         }
         return true;
@@ -225,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
 
 
         mListView = (ListView) findViewById(R.id.myListView);
@@ -233,3 +235,5 @@ public class MainActivity extends AppCompatActivity {
         helper = new FirebaseHelper(db, this, mListView);
         }
     }
+
+

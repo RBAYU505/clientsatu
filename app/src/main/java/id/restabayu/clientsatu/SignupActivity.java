@@ -16,6 +16,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
+import id.restabayu.clientsatu.welcome.PerfManager;
+
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
 
     ProgressBar progressBar;
@@ -76,11 +78,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
                 if(task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(),"Registrasi Berhasil !",Toast.LENGTH_SHORT).show();
-                /*    finish();
-                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
-                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent); */
+
                 } else {
 
                     if(task.getException()instanceof FirebaseAuthUserCollisionException) {
@@ -103,6 +101,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.textViewLogin:
                 finish();
+                //nyobo
+                PerfManager perfManager = new PerfManager(getApplicationContext());
+                perfManager.setFirstTimeLaunch(true);
                 startActivity(new Intent(this, SigninActivity.class));
                 break;
         }
