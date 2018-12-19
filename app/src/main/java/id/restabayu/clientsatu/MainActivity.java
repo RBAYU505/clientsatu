@@ -139,11 +139,10 @@ public class MainActivity extends AppCompatActivity {
             quoteTextView.setText(s.getDeskripsi());
             descriptionTextView.setText(s.getTanggal());
 
-            //ONITECLICK
+            //Saat Acara Di Tap Maka akan membuka detailActivity
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                //    Toast.makeText(c, s.getNama(), Toast.LENGTH_SHORT).show();
                     String[] classifieds = {
                             s.getNama(),
                             s.getTanggal(),
@@ -157,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             return convertView;
         }
 
-        //OPEN DETAIL ACTIVITY
+
         private void openDetailActivity(String[] data)
         {
             Intent i = new Intent(MainActivity.this, DetailActivity.class);
