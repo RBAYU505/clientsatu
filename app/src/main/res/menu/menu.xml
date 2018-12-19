@@ -2,6 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menuPengurus"
+        android:title="Pengurus"/>
+
+    <item
+        android:id="@+id/menuHelp"
+        android:title="Help" />
+
+    <item
         android:id="@+id/menuLogout"
         android:title="Logout" />
 

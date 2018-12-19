@@ -32,6 +32,9 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 
+import id.restabayu.clientsatu.Lainlain.Help;
+import id.restabayu.clientsatu.Lainlain.Pengurus;
+
 public class MainActivity extends AppCompatActivity {
     /**********************************FIREBASE HELPER START************************/
     public class FirebaseHelper {
@@ -180,10 +183,31 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+
+            //nyoboo
+            case R.id.menuPengurus:
+                startActivity(new Intent(this, Pengurus.class));
+                break;
+
+            case R.id.menuHelp:
+                startActivity(new Intent(this, Help.class));
+                break;
+
             case R.id.menuLogout:
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                startActivity(new Intent(this, Goodbye.class));
+                new AlertDialog.Builder(this, R.style.AlertDialogLogout)
+                        .setTitle("Yakin Ingin Logout ?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                FirebaseAuth.getInstance().signOut();
+                                finish();
+                                startActivity(new Intent(MainActivity.this, Goodbye.class));
+                            }
+
+                        })
+                        .setNegativeButton("Tidak", null)
+                        .show();
                 break;
         }
         return true;

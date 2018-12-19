@@ -6,7 +6,6 @@
     <string name="skip">LEWATI</string>
     <string name="start">MULAI</string>
 
-
     <string name="slide_1_title">UKM IK</string>
     <string name="slide_1_desc_a">UKM IK Merupakan Organisasi Mahasiswa di STMIK AKAKOM Yang Bergerak di Bidang Penalaran Ilmiah</string>
     <string name="slide_1_desc_b">UKM IK Didirikan Pada Tahun 1995 Atas Aspirasi Mahasiswa STMIK AKAKOM Sebagai Wadah untuk Berkarya dan Berkreatifitas</string>
@@ -14,4 +13,8 @@
     <string name="slide_2_title">AGENDA ACARA</string>
     <string name="slide_2_desc_a">Aplikasi Ini Memungkinkan Anda Untuk Melihat Daftar Agenda Kegiatan yang Akan Diselenggarakan oleh UKM IK.</string>
     <string name="slide_2_desc_b">Anda Juga Dapat Menerima Notifikasi dan Menambahkan Reminder pada Acara Agar Tidak Ketinggalan</string>
+
+    <string name="cara_register">"1.Klik Tampilan 'Belum Punya Akun? Daftar',  2.Selanjutnya Masukkan 'Alamat Email' anda Dan 'Password' Minimal '6 Karakter',  3.Lalu Klik Tombol 'SIGNUP', 4.Maka anda akan terdaftar, 5.Kemudian jika anda ingin login anda tinggal memilih tapilan 'Sudah Punya Akun? Login' maka anda akan langsung bisa masuk."</string>
+    <string name="cara_login">"1.Masukkan 'Email' dan 'Password' yang sudah terdaftar pada kolom 'Email' dan 'Password' yang tersedia,  2.Selanjutnya Klik Tombol 'SIGNIN',  3.Maka akan masuk ke menu Welcome,  4.Lalu Swipe Ke Kanan dan Klik Tombol 'Mulai'  5.Maka akan tampil Halaman Utama</string>
+    <string name="cara_remind">"1.Lihat daftar acara yang ada,  2.Klik salah satu acara untuk melihat detail acara tersebut,  3.Klik tombol 'INGATKAN SAYA',  3.Maka 'Reminder' berhasil dibuat, dan saat acara akan dimulai akan ada pemberitahuan di smartphone anda</string>
 </resources>

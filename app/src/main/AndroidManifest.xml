@@ -28,6 +28,9 @@
             android:name=".DetailActivity"
             android:parentActivityName=".MainActivity" />
 
+        <activity android:name=".Lainlain.Help"/>
+
+        <activity android:name=".Lainlain.Pengurus"/>
 
         <activity android:name=".Goodbye" />
 
