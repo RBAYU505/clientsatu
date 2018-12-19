@@ -8,10 +8,10 @@
 
 
     <string name="slide_1_title">UKM IK</string>
-    <string name="slide_1_desc_a">Merupakan Organisasi Mahasiswa di STMIK AKAKOM Yang Bergerak di Bidang Penalaran Ilmiah</string>
+    <string name="slide_1_desc_a">UKM IK Merupakan Organisasi Mahasiswa di STMIK AKAKOM Yang Bergerak di Bidang Penalaran Ilmiah</string>
     <string name="slide_1_desc_b">UKM IK Didirikan Pada Tahun 1995 Atas Aspirasi Mahasiswa STMIK AKAKOM Sebagai Wadah untuk Berkarya dan Berkreatifitas</string>
 
     <string name="slide_2_title">AGENDA ACARA</string>
     <string name="slide_2_desc_a">Aplikasi Ini Memungkinkan Anda Untuk Melihat Daftar Agenda Kegiatan yang Akan Diselenggarakan oleh UKM IK.</string>
-    <string name="slide_2_desc_b">Anda Juga Dapat Menerima Notifikasi dan Reminder Acara Agar Tidak Ketinggalan</string>
+    <string name="slide_2_desc_b">Anda Juga Dapat Menerima Notifikasi dan Menambahkan Reminder pada Acara Agar Tidak Ketinggalan</string>
 </resources>
