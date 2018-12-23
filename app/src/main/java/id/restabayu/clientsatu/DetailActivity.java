@@ -79,7 +79,7 @@ public class DetailActivity extends AppCompatActivity {
                 calendar.setTime(txtAlarm);
                 Intent myIntent = new Intent(this, AlarmReciever.class);
                 pendingIntent = PendingIntent.getBroadcast(DetailActivity.this, 0, myIntent, 0);
-                alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
             }
 
             else {

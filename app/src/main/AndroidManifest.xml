@@ -3,6 +3,9 @@
     package="id.restabayu.clientsatu">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -44,9 +47,8 @@
 
         <receiver
             android:name=".Service.AlarmReciever"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter android:priority="500" >
+            android:process=":remote" >
+            <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
