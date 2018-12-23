@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:title="menu"
+        android:icon="@drawable/ic_menu_black_24dp"
+        app:showAsAction="always">
 
-    <item
-        android:id="@+id/menuPengurus"
-        android:title="Pengurus"/>
+            <menu>
+                <item
+                    android:id="@+id/menuPengurus"
+                    android:title="Pengurus"
+                    android:icon="@drawable/care"/>
 
-    <item
-        android:id="@+id/menuHelp"
-        android:title="Help" />
+                <item
+                    android:id="@+id/menuHelp"
+                    android:title="Help"
+                    android:icon="@drawable/help"/>
 
-    <item
-        android:id="@+id/menuLogout"
-        android:title="Logout" />
+                <item
+                    android:id="@+id/menuLogout"
+                    android:title="Logout"
+                    android:icon="@drawable/kill"/>
+            </menu>
+    </item>
 
 </menu>

@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="TRI YUDHO WIBISONO"
+                android:text="TRI YUDO WIBISONO"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi1"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="WIDYA SULISTYAWATI"
+                android:text="WIDYA SULISTYANI"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi2"
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="ROBBY NARANDIKA"
+                android:text="ROBBY NARRANDIKA"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt5"
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="MAERIFAH NALURITA"
+                android:text="IIS NURAIDA"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt7"
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="FAJAR SETIAWAN"
+                android:text="FRANSISKA SEUK B"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi4"
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="ATIKA NURUL HAFIZAH"
+                android:text="RANDITIYA ANALIS P"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt9"
@@ -184,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="TRIA APRI UTAMI"
+                android:text="YULIANA ANJARWATY"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi5"
@@ -210,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="MAZ'UD AL HAFIZ"
+                android:text="SITI ZAENUN N"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt11"
@@ -218,7 +218,15 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="MUHAMMAD NAASHIF"
+                android:text="AJI KARUNIADI I"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="ENDRI KURNIAWAN"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi6"
@@ -244,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="ABDUL HAMMID"
+                android:text="KUSUMA WARDANI"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt13"
@@ -252,7 +260,31 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="DWI DIAN KUSUMA"
+                android:text="ANDI MUH IQRAM S"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt131"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="ZAKI MALIKI"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="ANANG SUWASTO"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt133"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="ITA ISMAULINAWATI"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi8"
@@ -278,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="ASEP AHMAD SOFYAN"
+                android:text="MISTHA AYU W"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt15"
@@ -286,7 +318,15 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="EKO SANTOSO"
+                android:text="NUKY ALFIANSYAH"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt151"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="PANDU DWI SETYA"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi9"
@@ -312,7 +352,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="ENDRI SETIAWAN"
+                android:text="DURROTUL KARIMAH K"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt17"
@@ -320,7 +360,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="BAGUS SAPUTRA"
+                android:text="ANDI AMIN PRAYOGI"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/spasi10"
@@ -346,7 +386,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="JIMMY FERNANDO"
+                android:text="SIROJUDIN ABDUL G"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
             <TextView
                 android:id="@+id/knt20"
@@ -354,7 +394,15 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:text="PUTRI FADILLAH"
+                android:text="TITANIA MEGANANDA"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+            <TextView
+                android:id="@+id/knt21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="MUHAMMAD AFRIZAL"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
 
 

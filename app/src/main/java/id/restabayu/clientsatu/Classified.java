@@ -7,15 +7,17 @@ public class Classified {
     private String deskripsi;
     private String tanggal;
     private String waktu;
+    private String notif;
     private String nama;
 
-    public Classified(String eventId, String kategori, String tempat, String deskripsi, String tanggal, String waktu, String nama) {
+    public Classified(String eventId, String kategori, String tempat, String deskripsi, String tanggal, String waktu, String notif, String nama) {
         this.eventId = eventId;
         this.kategori = kategori;
         this.tempat = tempat;
         this.deskripsi = deskripsi;
         this.tanggal = tanggal;
         this.waktu = waktu;
+        this.notif = notif;
         this.nama = nama;
     }
 
@@ -68,6 +70,14 @@ public class Classified {
 
     public void setWaktu(String waktu) {
         this.waktu = waktu;
+    }
+
+    public String getNotif() {
+        return notif;
+    }
+
+    public void setNotif(String notif) {
+        this.notif = notif;
     }
 
     public String getNama() {

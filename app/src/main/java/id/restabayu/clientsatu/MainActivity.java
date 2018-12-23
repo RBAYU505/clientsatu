@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                             s.getTanggal(),
                             s.getWaktu(),
                             s.getTempat(),
-                            s.getDeskripsi(),
+                            s.getDeskripsi()
                     };
                     openDetailActivity(classifieds);
                 }
