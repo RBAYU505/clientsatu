@@ -151,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
                             s.getTanggal(),
                             s.getWaktu(),
                             s.getTempat(),
-                            s.getDeskripsi()
+                            s.getDeskripsi(),
+                            s.getNotif()
                     };
                     openDetailActivity(classifieds);
                 }
@@ -168,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra("WAKTU_KEY",data[2]);
             i.putExtra("TEMPAT_KEY",data[3]);
             i.putExtra("DESKRIPSI_KEY",data[4]);
+            i.putExtra("NOTIF_KEY" , data[5]);
             startActivity(i);
         }
     }

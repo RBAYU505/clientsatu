@@ -25,7 +25,7 @@ import id.restabayu.clientsatu.Service.AlarmService;
 public class DetailActivity extends AppCompatActivity {
 
 
-    TextView namaTxt,tanggalTxt,waktuTxt,tempatTxt,deskripsiTxt;
+    TextView namaTxt,tanggalTxt,waktuTxt,tempatTxt,deskripsiTxt,notifTxt;
     AlarmManager alarmManager;
     private PendingIntent pendingIntent;
 
@@ -40,6 +40,7 @@ public class DetailActivity extends AppCompatActivity {
         waktuTxt = (TextView) findViewById(R.id.waktuDetailTextView);
         tempatTxt = (TextView) findViewById(R.id.tempatDetailTextView);
         deskripsiTxt = (TextView) findViewById(R.id.deskripsiDetailTextView);
+        notifTxt = (TextView) findViewById(R.id.notifTxt);
 
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         ToggleButton alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
@@ -54,6 +55,7 @@ public class DetailActivity extends AppCompatActivity {
         String waktu = i.getExtras().getString("WAKTU_KEY");
         String tempat = i.getExtras().getString("TEMPAT_KEY");
         String deskripsi = i.getExtras().getString("DESKRIPSI_KEY");
+        String notif = i.getExtras().getString("NOTIF_KEY");
 
 
         //BIND DATA
@@ -62,6 +64,7 @@ public class DetailActivity extends AppCompatActivity {
         waktuTxt.setText(waktu);
         tempatTxt.setText(tempat);
         deskripsiTxt.setText(deskripsi);
+        notifTxt.setText(notif);
 
 
     }
@@ -70,7 +73,7 @@ public class DetailActivity extends AppCompatActivity {
 
         public void onToggleClicked (View view) {
             String date = Converter.ConvertDate(tanggalTxt.getText().toString(), "dd/MM/yyyy", "yyyy MM dd");
-            String time = waktuTxt.getText().toString();
+            String time = notifTxt.getText().toString();
             String dateTime = date + " " + time;
             Date txtAlarm = Converter.toDate(dateTime, "yyyy MM dd HH:mm");
             if (((ToggleButton) view).isChecked()) {

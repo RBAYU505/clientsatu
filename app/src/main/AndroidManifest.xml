@@ -3,7 +3,6 @@
     package="id.restabayu.clientsatu">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
@@ -25,10 +24,12 @@
         <activity android:name=".welcome.WelcomeActivity" />
         <activity android:name=".SignupActivity" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"> </activity>
         <activity
             android:name=".DetailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"> </activity>
 
         <activity android:name=".Lainlain.Help"/>
 
