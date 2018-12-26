@@ -195,15 +195,14 @@
             android:paddingRight="70dp"
             android:paddingLeft="70dp">
 
-            <ToggleButton
-                android:id="@+id/alarmToggle"
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Alarm On/Off"
-                android:onClick="onToggleClicked"
-                android:textOn="Matikan Pengingat"
-                android:textOff="Ingatkan Saya"/>
+                android:background="@drawable/rounded_button_solid"
+                android:onClick="ingatkanSaya"
+                android:text="INGATKAN SAYA"
+                android:textColor="@color/windowBackground"/>
 
         </LinearLayout>
 

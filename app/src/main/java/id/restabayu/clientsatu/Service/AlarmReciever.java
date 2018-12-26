@@ -10,6 +10,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 
+
 import static android.support.v4.content.ContextCompat.startForegroundService;
 import static android.support.v4.content.WakefulBroadcastReceiver.startWakefulService;
 
@@ -27,6 +28,7 @@ public class AlarmReciever extends BroadcastReceiver {
 
         Ringtone ringtone = RingtoneManager.getRingtone(context, alarmUri);
             ringtone.play();
+
 
         //this will send a notification message
         ComponentName comp = new ComponentName(context.getPackageName(),

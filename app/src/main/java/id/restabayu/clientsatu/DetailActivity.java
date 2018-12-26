@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -43,19 +44,20 @@ public class DetailActivity extends AppCompatActivity {
         notifTxt = (TextView) findViewById(R.id.notifTxt);
 
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        ToggleButton alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
+     //   ToggleButton alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
 
         //GET INTENT
         Intent i = this.getIntent();
 
 
-        //RECEIVE DATA
+        //RECEIVE DATA ngangggo iki raiso dibukak.
         String nama = i.getExtras().getString("NAMA_KEY");
         String tanggal = i.getExtras().getString("TANGGAL_KEY");
         String waktu = i.getExtras().getString("WAKTU_KEY");
         String tempat = i.getExtras().getString("TEMPAT_KEY");
         String deskripsi = i.getExtras().getString("DESKRIPSI_KEY");
         String notif = i.getExtras().getString("NOTIF_KEY");
+
 
 
         //BIND DATA
@@ -69,9 +71,26 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+    public void ingatkanSaya(View view) {
+        String date = Converter.ConvertDate(tanggalTxt.getText().toString(), "dd/MM/yyyy", "yyyy MM dd");
+        String time = notifTxt.getText().toString();
+        String dateTime = date + " " + time;
+        Date txtAlarm = Converter.toDate(dateTime, "yyyy MM dd HH:mm");
+
+            Log.d("MyActivity", "Alarm On");
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(txtAlarm);
+            Intent myIntent = new Intent(this, AlarmReciever.class);
+            pendingIntent = PendingIntent.getBroadcast(DetailActivity.this, 0, myIntent, 0);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+
+            Toast.makeText(getApplicationContext(), "Pengingat telah dibuat !", Toast.LENGTH_SHORT).show();
+
+    }
 
 
-        public void onToggleClicked (View view) {
+
+     /*   public void onToggleClicked (View view) {
             String date = Converter.ConvertDate(tanggalTxt.getText().toString(), "dd/MM/yyyy", "yyyy MM dd");
             String time = notifTxt.getText().toString();
             String dateTime = date + " " + time;
@@ -89,5 +108,5 @@ public class DetailActivity extends AppCompatActivity {
                 alarmManager.cancel(pendingIntent);
                 Log.d("MyActivity", "Alarm Off");
             }
-        }
+        } */
 }

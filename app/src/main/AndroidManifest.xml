@@ -3,13 +3,13 @@
     package="id.restabayu.clientsatu">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/calendar"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/calendar"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splashscreen">
@@ -47,11 +47,7 @@
             android:enabled="true"/>
 
         <receiver
-            android:name=".Service.AlarmReciever"
-            android:process=":remote" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
+            android:name=".Service.AlarmReciever">
         </receiver>
 
     </application>
