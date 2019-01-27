@@ -26,9 +26,10 @@ import id.restabayu.clientsatu.Service.AlarmService;
 public class DetailActivity extends AppCompatActivity {
 
 
-    TextView namaTxt,tanggalTxt,waktuTxt,tempatTxt,deskripsiTxt,notifTxt;
+    TextView namaTxt,tanggalTxt,waktuTxt,tempatTxt,deskripsiTxt,interval, tvInterval;
     AlarmManager alarmManager;
     private PendingIntent pendingIntent;
+    String waktuAcara, tglAcara, vInterval, intervalTgl, intervalWaktu;
 
 
     @Override
@@ -41,7 +42,8 @@ public class DetailActivity extends AppCompatActivity {
         waktuTxt = (TextView) findViewById(R.id.waktuDetailTextView);
         tempatTxt = (TextView) findViewById(R.id.tempatDetailTextView);
         deskripsiTxt = (TextView) findViewById(R.id.deskripsiDetailTextView);
-        notifTxt = (TextView) findViewById(R.id.notifTxt);
+        interval = (TextView) findViewById(R.id.interval);
+        tvInterval = (TextView) findViewById(R.id.vInterval);
 
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
      //   ToggleButton alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
@@ -50,14 +52,13 @@ public class DetailActivity extends AppCompatActivity {
         Intent i = this.getIntent();
 
 
-        //RECEIVE DATA ngangggo iki raiso dibukak.
-        String nama = i.getExtras().getString("NAMA_KEY");
-        String tanggal = i.getExtras().getString("TANGGAL_KEY");
-        String waktu = i.getExtras().getString("WAKTU_KEY");
-        String tempat = i.getExtras().getString("TEMPAT_KEY");
-        String deskripsi = i.getExtras().getString("DESKRIPSI_KEY");
-        String notif = i.getExtras().getString("NOTIF_KEY");
-
+        //RECEIVE DATA ngangggo iki nol (yen i.getExtra.getString focedclose)
+        String nama = i.getStringExtra("NAMA_KEY");
+        String tanggal = i.getStringExtra("TANGGAL_KEY");
+        String waktu = i.getStringExtra("WAKTU_KEY");
+        String tempat = i.getStringExtra("TEMPAT_KEY");
+        String deskripsi = i.getStringExtra("DESKRIPSI_KEY");
+        String interValKey = i.getStringExtra("INTERVAL_KEY");
 
 
         //BIND DATA
@@ -66,20 +67,54 @@ public class DetailActivity extends AppCompatActivity {
         waktuTxt.setText(waktu);
         tempatTxt.setText(tempat);
         deskripsiTxt.setText(deskripsi);
-        notifTxt.setText(notif);
+
+        tglAcara = tanggal;
+        waktuAcara = waktu;
+        vInterval = interValKey;
+
+        tvInterval.setText(vInterval);
 
 
     }
 
     public void ingatkanSaya(View view) {
         String date = Converter.ConvertDate(tanggalTxt.getText().toString(), "dd/MM/yyyy", "yyyy MM dd");
-        String time = notifTxt.getText().toString();
+        String time = waktuTxt.getText().toString();
         String dateTime = date + " " + time;
         Date txtAlarm = Converter.toDate(dateTime, "yyyy MM dd HH:mm");
 
-            Log.d("MyActivity", "Alarm On");
+        long secondsInMilli = 1000;
+        long minutesInMilli = secondsInMilli * 60;
+        long hoursInMilli = minutesInMilli * 60;
+        long daysInMilli = hoursInMilli * 24;
+
+        long setInterval = 0L;
+        if(vInterval.equals("1")){
+            setInterval = minutesInMilli * 30;
+        }else if(vInterval.equals("2")){
+            setInterval = hoursInMilli;
+        }else if(vInterval.equals("3")){
+            setInterval = hoursInMilli * 3;
+        }else if(vInterval.equals("4")){
+            setInterval = hoursInMilli * 6;
+        }else if(vInterval.equals("5")){
+            setInterval = hoursInMilli * 12;
+        }else if(vInterval.equals("6")){
+            setInterval = daysInMilli;
+        }else {
+            setInterval = minutesInMilli * 30;
+        }
+
+
+        long result = txtAlarm.getTime() - setInterval;
+        interval.setText(Converter.getDate(result, "dd/MM/yyyy HH:mm"));
+        String dF = Converter.ConvertDate(interval.getText().toString(), "dd/MM/yyyy HH:mm", "yyyy MM dd HH:mm");
+        Date resAlarm = Converter.toDate(dF, "yyyy MM dd HH:mm");
+
+
+        Log.d("MyActivity", "Alarm On");
             Calendar calendar = Calendar.getInstance();
-            calendar.setTime(txtAlarm);
+            calendar.setTime(resAlarm);
             Intent myIntent = new Intent(this, AlarmReciever.class);
             pendingIntent = PendingIntent.getBroadcast(DetailActivity.this, 0, myIntent, 0);
             alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
@@ -87,8 +122,6 @@ public class DetailActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Pengingat telah dibuat !", Toast.LENGTH_SHORT).show();
 
     }
-
-
 
      /*   public void onToggleClicked (View view) {
             String date = Converter.ConvertDate(tanggalTxt.getText().toString(), "dd/MM/yyyy", "yyyy MM dd");

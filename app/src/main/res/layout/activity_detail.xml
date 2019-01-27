@@ -207,12 +207,20 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/notifTxt"
+            android:id="@+id/interval"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="notif"
+            android:text="Waktu Interval"
             android:layout_gravity="left"
-            android:visibility="invisible"
+            android:visibility="visible"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+        <TextView
+            android:id="@+id/vInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wktnotif"
+            android:layout_gravity="left"
+            android:visibility="visible"
             android:textAppearance="?android:attr/textAppearanceListItemSmall" />
 
     </LinearLayout>
